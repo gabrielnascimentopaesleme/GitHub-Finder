@@ -6,7 +6,7 @@ import { AiOutlineStar, AiOutlineFork } from 'react-icons/ai'
 
 const repos = ({name, language, html_url, stargazers_count, forks_count}: repoProps) => {
   return (
-    <div className='flex flex-col items-center content-center bg-sky-950 w-full'>
+    <div className='flex flex-col items-center content-center bg-sky-950 w-full  text-slate-100 p-6 rounded-lg'>
       <h3>Nome do Repositório: {name}</h3>
       <p className='flex items-center'><BsCodeSlash/>{language}</p>
       <p className='flex items-center'><AiOutlineStar/><span>{stargazers_count}</span></p>
