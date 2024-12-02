@@ -5,8 +5,8 @@ type Props = {}
 
 const backBtn = (props: Props) => {
   return (
-    <div>
-      <Link href={'/'}>Voltar</Link>
+    <div >
+      <Link className='absolute top-2 left-4' href={'/'}>Voltar</Link>
     </div>
   )
 }
