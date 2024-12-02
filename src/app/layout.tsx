@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Fredoka  } from 'next/font/google';
 import "./globals.css";
 
 const geistSans = localFont({
@@ -11,6 +12,11 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+const fredoka = Fredoka({
+  subsets: ['latin'], // Escolha os subsets que precisa
+  weight: ['300', '400', '500', '600', '700'], // Inclua todos os pesos disponíveis
+  variable: '--font-fredoka', // Defina uma variável CSS opcional
 });
 
 export const metadata: Metadata = {
@@ -26,8 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-indigo-950`}
       >
+        <h1 className="text-center text-4xl font-bold text-slate-100">GitHub Finder</h1>
         {children}
       </body>
     </html>
